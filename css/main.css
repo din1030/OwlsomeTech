@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/earlyaccess/notosanstc.css");
+* {
+  font-family: 'Raleway', 'Noto Sans TC' !important;
+}
+*:not(div):active,
+*:not(div):focus {
+  outline: 0;
+  box-shadow: none !important;
+}
+/* ----------------- */
+#banner-block,
+#main-slider {
+  height: 682px;
+  width: 100%;
+  padding-bottom: 50px;
+}
+#banner-block .swiper-slide,
+#main-slider .swiper-slide {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#banner-block .swiper-slide.s1,
+#main-slider .swiper-slide.s1 {
+  background-image: url("../img/svg/c1.svg");
+}
+#banner-block .swiper-slide.s2,
+#main-slider .swiper-slide.s2 {
+  background-image: url("../img/svg/c2.svg");
+}
+#banner-block .swiper-slide.s3,
+#main-slider .swiper-slide.s3 {
+  background-image: url("../img/svg/c3.svg");
+}
+[class*="swiper-button"] {
+  width: 71px;
+  height: 126px;
+  background-size: 71px 126px !important;
+}
+.swiper-button-prev {
+  background-image: url("../img/svg/slider-prev.svg") !important;
+  left: 55px;
+}
+.swiper-button-next {
+  background-image: url("../img/svg/slider-next.svg") !important;
+  right: 55px;
+}
+.swiper-pagination {
+  bottom: 0 !important;
+}
+.swiper-pagination-bullet {
+  width: 27px;
+  height: 27px;
+  background-color: #fff;
+  border: 2px solid #55d6d2;
+  margin-left: 15px !important;
+  margin-right: 15px !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: #55d6d2;
+}
+.block-margin {
+  padding-top: 116px;
+  padding-bottom: 116px;
+}
+#join-block {
+  height: 440px;
+  overflow: hidden;
+  background-image: url("../img/join-us-bg.jpg");
+  background-repeat-x: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: -1px;
+}
+#float-line {
+  position: absolute;
+  height: 440px;
+  top: 0;
+  left: 0;
+  transition: all 7s linear;
+}
+#float-line.animate {
+  left: -450px;
+}
+#float-line img {
+  height: 100%;
+}
+footer {
+  color: #55d6d2;
+  background-color: #333133;
+  padding-top: 49px;
+  padding-bottom: 30px;
+}
+footer #copyright {
+  color: #e2e2e2;
+  margin-top: 35px;
+  font-size: 12px;
+}

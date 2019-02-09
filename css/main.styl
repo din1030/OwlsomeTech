@@ -1,0 +1,97 @@
+// out: $1.css
+
+$green = #55D6D2
+$light-blue = #CAF2F0
+$gray-blue = #42536C
+$yellow = #FFFAB8
+$pink = #FFC4C4
+
+@import url('https://fonts.googleapis.com/css?family=Raleway')
+@import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css')
+
+*
+	font-family: 'Raleway', 'Noto Sans TC' !important
+	&:not(div)
+		&:active, &:focus
+			outline 0
+			box-shadow none!important
+
+/* ----------------- */
+
+
+#banner-block
+
+#main-slider
+	height: 682px
+	width: 100%
+	padding-bottom: 50px
+	.swiper-slide
+		background-size: cover
+		background-repeat: no-repeat
+		// height: 632px
+		&.s1
+			background-image: url(../img/svg/c1.svg)
+		&.s2
+			background-image: url(../img/svg/c2.svg)
+		&.s3
+			background-image: url(../img/svg/c3.svg)
+
+[class*="swiper-button"]
+	width: 71px
+	height: 126px
+	background-size: 71px 126px !important
+	// transform: translateY(-50%)
+
+.swiper-button-prev
+	background-image: url(../img/svg/slider-prev.svg) !important
+	left: 55px
+.swiper-button-next
+	background-image: url(../img/svg/slider-next.svg) !important
+	right: 55px
+
+.swiper-pagination
+	bottom: 0 !important
+
+.swiper-pagination-bullet
+	width: 27px
+	height: 27px
+	background-color: white
+	border 2px solid $green
+	margin-left: 15px !important
+	margin-right: 15px !important
+
+.swiper-pagination-bullet-active
+	background-color: $green
+
+.block-margin
+	padding-top 116px
+	padding-bottom 116px
+
+#join-block
+	height: 440px
+	overflow: hidden
+	background-image: url('../img/join-us-bg.jpg')
+	background-repeat-x: no-repeat
+	background-size: cover
+	background-position: center
+	margin-bottom: -1px
+
+#float-line
+	position: absolute
+	height: 440px
+	top: 0
+	left: 0
+	transition all 7s linear
+	&.animate
+		left: -450px
+	img
+		height: 100%
+footer
+	color: $green
+	background-color: #333133
+	padding-top 49px
+	padding-bottom: 30px
+	#copyright
+		color: #E2E2E2
+		margin-top: 35px
+		font-size: 12px

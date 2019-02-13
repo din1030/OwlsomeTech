@@ -6,92 +6,184 @@ $gray-blue = #42536C
 $yellow = #FFFAB8
 $pink = #FFC4C4
 
-@import url('https://fonts.googleapis.com/css?family=Raleway')
-@import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css')
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+@import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css');
 
 *
-	font-family: 'Raleway', 'Noto Sans TC' !important
+	font-family: 'Raleway', 'Noto Sans TC' !important;
+	font-size: 24px;
+	color: $gray-blue;
+	font-weight: bold;
+	letter-spacing: 5.888px;
 	&:not(div)
 		&:active, &:focus
 			outline 0
 			box-shadow none!important
 
+.block-title
+	font-size: 32px;
+	font-style: italic;
+	font-weight: bold;
+	margin-bottom: 10px;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 /* ----------------- */
 
-
-#banner-block
+#particles-overlay
+	position: absolute;
+	height: 682px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 100;
 
 #main-slider
-	height: 682px
-	width: 100%
-	padding-bottom: 50px
+	height: 682px;
+	width: 100%;
+	padding-bottom: 50px;
 	.swiper-slide
-		background-size: cover
-		background-repeat: no-repeat
-		// height: 632px
+		background-size: cover;
+		background-repeat: no-repeat;
+		// height: 632px;
 		&.s1
-			background-image: url(../img/svg/c1.svg)
+			background-image: url(../img/svg/c1.svg);
 		&.s2
-			background-image: url(../img/svg/c2.svg)
+			background-image: url(../img/svg/c2.svg);
 		&.s3
-			background-image: url(../img/svg/c3.svg)
+			background-image: url(../img/svg/c3.svg);
 
 [class*="swiper-button"]
-	width: 71px
-	height: 126px
-	background-size: 71px 126px !important
-	// transform: translateY(-50%)
+	width: 55px;
+	height: 97px;
+	background-size: 55px 97px !important;
+	transform: translateY(-50%);
 
 .swiper-button-prev
-	background-image: url(../img/svg/slider-prev.svg) !important
-	left: 55px
+	background-image: url(../img/svg/slider-prev.svg) !important;
+	left: 71px;
 .swiper-button-next
-	background-image: url(../img/svg/slider-next.svg) !important
-	right: 55px
+	background-image: url(../img/svg/slider-next.svg) !important;
+	right: 71px;
 
 .swiper-pagination
-	bottom: 0 !important
+	bottom: 0 !important;
 
 .swiper-pagination-bullet
-	width: 27px
-	height: 27px
-	background-color: white
+	width: 27px;
+	height: 27px;
+	background-color: white;
 	border 2px solid $green
-	margin-left: 15px !important
-	margin-right: 15px !important
+	margin-left: 15px !important;
+	margin-right: 15px !important;
 
 .swiper-pagination-bullet-active
-	background-color: $green
+	background-color: $green;
 
-.block-margin
+// #scroll-down
+// 	margin-bottom: 124px;
+
+/*** Vision  ***/
+#animation-trigger
+	min-height: 1px;
+	margin-bottom: 100px;
+
+// #scroll-animation
+// 	height: 400px;
+
+.block-padding
 	padding-top 116px
 	padding-bottom 116px
 
+/*** Products & Services ***/
+#product-block
+	background-image: url('../img/blue-bg.jpg');
+	background-repeat-x: no-repeat;
+	background-size: cover;
+	background-position: center;
+	*
+		color: white;
+	.row
+		margin-top: 96px;
+
+.product-label
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	color: $gray-blue !important;
+	padding: 5px 10px;
+	width: 352px;
+
+.product-logo
+	margin-top: 16px;
+	margin-bottom: 32px;
+
+.product-intro
+	font-size: 18px;
+	letter-spacing: 3.2384px;
+
+.product-item:first-child .product-intro
+	margin-bottom: 112px;
+
+/*** Team ***/
+#our-team
+	margin-bottom: 56px;
+
+.photo-wrapper
+	border-radius: 50%;
+	background: $light-blue;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	margin-bottom: 24px;
+	&:hover
+		box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.5);
+
+.mem-name
+	border-bottom: 3px solid rgba(80, 227, 194, 0.3);
+
+.mem-title
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 54px;
+	.sm
+		font-size: 18px;
+
+/*** Join Us ***/
 #join-block
-	height: 440px
-	overflow: hidden
-	background-image: url('../img/join-us-bg.jpg')
-	background-repeat-x: no-repeat
-	background-size: cover
-	background-position: center
-	margin-bottom: -1px
+	height: 440px;
+	overflow: hidden;
+	background-image: url('../img/join-us-bg.jpg');
+	background-repeat-x: no-repeat;
+	background-size: 101% 101%;
+	background-position: center;
 
 #float-line
-	position: absolute
-	height: 440px
-	top: 0
-	left: 0
-	transition all 7s linear
-	&.animate
-		left: -450px
-	img
-		height: 100%
+	height: 440px;
+	background: url(../img/svg/float-line.svg) repeat-x 0 / 100% auto;;
+	animation: ani 40s linear infinite;
+	background-size: cover;
+	> div
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+		&:nth-child(2)
+			margin: 30px 0;
+
+@keyframes ani
+	0%
+		background-position: 4400px 0;
+	100%
+		background-position: 0 0;
+
+/*** Footer ***/
 footer
-	color: $green
-	background-color: #333133
+	background-color: #333133;
 	padding-top 49px
-	padding-bottom: 30px
+	padding-bottom: 30px;
+	*
+		color: $green;
+		font-size: 18px;
+		letter-spacing: 1.656px;
 	#copyright
-		color: #E2E2E2
-		margin-top: 35px
-		font-size: 12px
+		color: #E2E2E2;
+		margin-top: 35px;
+		font-size: 12px;
+		letter-spacing: normal;
+		font-weight: normal;

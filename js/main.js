@@ -6,7 +6,7 @@ $(document).ready(function() {
 	var mySwiper = new Swiper('#main-slider', {
 		loop: true,
 		autoplay: {
-			delay: 3500,
+			delay: 5000,
 		},
 		// If we need pagination
 		pagination: {

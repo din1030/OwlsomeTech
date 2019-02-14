@@ -57,6 +57,7 @@ $pink = #FFC4C4
 	height: 97px;
 	background-size: 55px 97px !important;
 	transform: translateY(-50%);
+	z-index: 200;
 
 .swiper-button-prev
 	background-image: url(../img/svg/slider-prev.svg) !important;
@@ -100,10 +101,33 @@ $pink = #FFC4C4
 	background-repeat-x: no-repeat;
 	background-size: cover;
 	background-position: center;
+	overflow: hidden;
 	*
 		color: white;
 	.row
 		margin-top: 96px;
+
+#spinning-bg
+	width: 150%;
+	height: 150%;
+	position: absolute;
+	// transform: translate(-50%, -50%);
+	top: -25%;
+	left: -25%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-image: url('../img/blue-spin-bg.png');
+	content: '';
+	animation: spinZ 24s linear infinite;
+
+@keyframes spinZ
+	0%
+		-webkit-transform: rotate(0deg);
+		-webkit-transform-origin: 50% 50%;
+	100%
+		-webkit-transform: rotate(360deg);
+		-webkit-transform-origin: 50% 50%;
 
 .product-label
 	background: rgba(255, 255, 255, 0.8);

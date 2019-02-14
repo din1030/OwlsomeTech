@@ -5,6 +5,7 @@ $(document).ready(function() {
 	});
 	var mySwiper = new Swiper('#main-slider', {
 		loop: true,
+		speed: 1200,
 		autoplay: {
 			delay: 5000,
 		},
@@ -37,7 +38,7 @@ $(document).ready(function() {
 	];
 
 	// create tween
-	var tween = TweenMax.to(obj, 0.5, {
+	var tween = TweenMax.to(obj, 1, {
 		curImg: images.length - 1, // animate propery curImg to number of images
 		roundProps: "curImg", // only integers so it can be used as an array index
 		// repeat: 3, // repeat 3 times
@@ -54,7 +55,7 @@ $(document).ready(function() {
 	// create a scene
 	var scene = new ScrollMagic.Scene({
 			triggerElement: '#animation-trigger',
-			duration: 700, // the scene should last for a scroll distance of 100px
+			duration: 1000, // the scene should last for a scroll distance of 100px
 			triggerHook: 0.05
 		})
 		.setTween(tween)

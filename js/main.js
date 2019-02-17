@@ -1,8 +1,13 @@
 $(document).ready(function() {
 
-	$("#scroll-down a").click(function(event) {
-		$(document).scrollTo($('#scroll-down-target'), 500);
+	// 區塊連結都用捲動的
+	$('.scroll-link').click(function(event) {
+		event.preventDefault();
+		var target = $(this).attr('href');
+		$(document).scrollTo($(target), 500);
 	});
+
+	// slider setting
 	var mySwiper = new Swiper('#main-slider', {
 		loop: true,
 		speed: 1200,
@@ -22,6 +27,7 @@ $(document).ready(function() {
 
 	});
 
+	// parallax setting
 	var images = [
 		'../img/svg/stage1.svg',
 		'../img/svg/stage2.svg',
@@ -63,6 +69,7 @@ $(document).ready(function() {
 		.addIndicators() // add indicators (requires plugin)
 		.addTo(controller);
 
+	// our team hover change pics
 	var originalSrc, $teamPic;
 	var hoverPhoto = [
 		'roger-hover.png',
@@ -83,27 +90,16 @@ $(document).ready(function() {
 	particlesJS.load("particles-overlay", "./js/particle.json", function() {
 		console.log('callback - particles.js config loaded');
 	});
-	// var count_particles, stats, update;
-	// stats = new Stats;
-	// stats.setMode(0);
-	// stats.domElement.style.position = 'absolute';
-	// stats.domElement.style.left = '0px';
-	// stats.domElement.style.top = '0px';
-	// document.body.appendChild(stats.domElement);
-	// count_particles = document.querySelector('.js-count-particles');
-	// update = function() {
-	// 	stats.begin();
-	// 	stats.end();
-	// 	if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-	// 		count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-	// 	}
-	// 	requestAnimationFrame(update);
-	// };
-	// requestAnimationFrame(update);;
 
 	$(window).scroll(function(event) {
 		if (!$('#float-line').hasClass('animate') && $('#join-block').visible) {
 			$('#float-line').addClass('animate');
+		}
+		var y = $(window).scrollTop();
+		if (y >= $('header').height()) {
+			$('header').addClass('scrolling');
+		} else {
+			$('header').removeClass('scrolling');
 		}
 	});
 

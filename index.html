@@ -10,7 +10,25 @@
 	</head>
 	<body>
 		<!-- menu -->
-		<header></header>
+		<header>
+			<ul class="nav justify-content-center">
+				<li class="nav-item">
+					<a class="nav-link scroll-link" href="#banner-block">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link scroll-link" href="#vision-block">Vision</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link scroll-link" href="#banner-block"><img src="img/svg/logo-w.svg" alt="" class="img-fluid"></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link scroll-link" href="#product-block">Product</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link scroll-link" href="#team-block">About</a>
+				</li>
+			</ul>
+		</header>
 		<!-- main slider -->
 		<div id="banner-block">
 			<div id="main-slider" class="swiper-container">
@@ -30,7 +48,7 @@
 			</div>
 		</div>
 		<div id="scroll-down" class="text-center mt-2">
-			<a href="#"><img src="img/svg/scroll-down.svg" alt=""></a>
+			<a href="#scroll-down-target" class="scroll-link"><img src="img/svg/scroll-down.svg" alt=""></a>
 		</div>
 		<!-- vision -->
 		<div id="vision-block" class="block-padding">
@@ -46,11 +64,11 @@
 				<div id="parallax-block">
 					<div id="animation-wrapper">
 						<div class="row">
-							<div id="parallax-text" class="col-12 col-md-4 d-flex align-items-center">
+							<div id="parallax-text" class="d-flex align-items-center text-center">
 								我們致力於打造完善的<br>
 								資料科學應用方案
 							</div>
-							<div id="scroll-animation" class="col-12 col-md-8 d-flex align-items-center">
+							<div id="scroll-animation" class="d-flex align-items-center">
 								<img src="img/svg/stage1.svg" alt="" class="img-fluid">
 							</div>
 						</div>
@@ -67,18 +85,24 @@
 				<div class="row">
 					<div class="col-12 col-md-6">
 						<div class="product-item">
-							<div class="product-label">Patent Intelligence</div>
+							<div class="product-label">
+								Patent Intelligence
+								<div class="gradient-line"></div>
+							</div>
 							<div class="product-logo"><img src="img/product/inqbic.png" srcset="img/product/inqbic@2x.png 2x, img/product/inqbic@3x.png 3x" class="img-fluid w-100"></div>
 							<div class="product-intro">針對專利研究設計的資料運算服務，協助研究人員、產業分析師與企業研發經理進行專利分析，省去蒐集專利資料與程式撰寫的瑣碎過程，並提供客製化的應用開發服務。</div>
 						</div>
 						<div class="product-item">
-							<div class="product-label">IoT Solution</div>
+							<div class="product-label">
+								IoT Solution
+								<div class="gradient-line"></div>
+							</div>
 							<div class="product-logo"><img src="img/product/ekeeper.png" srcset="img/product/ekeeper@2x.png 2x, img/product/ekeeper@3x.png 3x" class="img-fluid w-100"></div>
 							<div class="product-intro">Chyiher "eKeeper" Elevator Management System 與其禾電梯合作，量身打造的電梯管理系統。以物聯網技術為核心，隨時掌握電梯運行數據，並提供深度資料分析服務與人工智慧應用。</div>
 						</div>
 					</div>
-					<div class="col-12 col-md-6">
-						<img src="img/svg/service-nodes.svg" alt="" class="img-fluid w-100">
+					<div class="col-12 col-md-6 text-right">
+						<img src="img/service-nodes.png" alt="" class="img-fluid" srcset="img/service-nodes@2x.png 2x, img/service-nodes@3x.png 3x">
 					</div>
 				</div>
 			</div>

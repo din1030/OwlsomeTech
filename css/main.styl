@@ -8,10 +8,11 @@ $pink = #FFC4C4
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 @import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i');
 // font-family: 'Raleway', 'Noto Sans TC' !important;
 
 *
-	font-family: 'Noto Sans TC' !important;
+	font-family: 'Noto Sans', 'Noto Sans TC' !important;
 	font-size: 24px;
 	color: $gray-blue;
 	font-weight: bold;
@@ -54,6 +55,7 @@ header
 		&:not(:nth-child(3)) .nav-link
 			padding-top: 25px;
 	.nav-link
+		font-family: 'Raleway' !important;
 		color: white;
 		font-size: 15px;
 		letter-spacing: 2.76px;
@@ -79,7 +81,7 @@ header
 	width: 100%;
 	padding-bottom: 50px;
 	.swiper-slide
-		background-size: contain;
+		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center center;
 		// height: 632px;
@@ -155,6 +157,13 @@ header
 	padding-right: 15px;
 	padding-left: 15px;
 	justify-content: flex-end;
+
+@media (max-width 767px)
+	#animation-wrapper .row
+		flex-direction: row-reverse;
+	#parallax-text, #scroll-animation
+		flex: 0 0 100%;
+		max-width: 100%;
 
 .block-padding
 	padding-top 116px

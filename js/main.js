@@ -95,6 +95,9 @@ $(document).ready(function() {
 		if (!$('#float-line').hasClass('animate') && $('#join-block').visible) {
 			$('#float-line').addClass('animate');
 		}
+		if ($('#scroll-down-target').visible) {
+			$('#scroll-down-target > *').addClass('anima-animate-enter54');
+		}
 		var y = $(window).scrollTop();
 		if (y >= $('header').height()) {
 			$('header').addClass('scrolling');

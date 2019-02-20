@@ -103,6 +103,26 @@ $(document).ready(function() {
 		}
 	});
 
+	var options = {
+		line: "//owlsometech.gogodin-studio.com/img/svg/qrcode.svg", // Line QR code URL
+		email: "service@owlsome.tech", // Email
+		call_to_action: "Contact Us", // Call to action
+		button_color: "#55D6D2", // Color of button
+		position: "right", // Position may be 'right' or 'left'
+		order: "line,email", // Order of buttons
+	};
+	var proto = document.location.protocol,
+		host = "whatshelp.io",
+		url = proto + "//static." + host;
+	var s = document.createElement('script');
+	s.type = 'text/javascript';
+	s.async = true;
+	s.src = url + '/widget-send-button/js/init.js';
+	s.onload = function() {
+		WhWidgetSendButton.init(host, proto, options);
+	};
+	var x = document.getElementsByTagName('script')[0];
+	x.parentNode.insertBefore(s, x);
 });
 
 // 判斷元件是否出現在 viewport

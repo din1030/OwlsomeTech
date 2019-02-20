@@ -20,6 +20,9 @@ $pink = #FFC4C4
 			outline 0
 			box-shadow none!important
 
+body
+	background-color: #F9FBFC;
+
 .flex-center
 	-ms-flex-pack: center!important;
 	justify-content: center!important;
@@ -55,6 +58,10 @@ header
 		letter-spacing: 2.76px;
 		padding: 0;
 		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		transition: background-size .4s ease;
+		background: linear-gradient(to bottom, transparent 62%, #55D6D2 0) center 100%/0% 20% no-repeat;
+		 &:hover
+			background-size: 100% 20%;
 	&.scrolling
 		background-color: rgba(51, 49, 51, .3);
 
@@ -71,7 +78,7 @@ header
 	width: 100%;
 	padding-bottom: 50px;
 	.swiper-slide
-		background-size: cover;
+		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center center;
 		// height: 632px;
@@ -82,6 +89,20 @@ header
 		&.s3
 			background-image: url(../img/svg/c3.svg);
 
+.swiper-slide *
+	letter-spacing: normal;
+	font-size: 36px;
+
+.s1-text *
+	color: black;
+
+.s2-text *
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	font-size: 48px;
+
+.s3-text
+	width: 45%;
+
 [class*="swiper-button"]
 	width: 55px;
 	height: 97px;
@@ -91,10 +112,11 @@ header
 
 .swiper-button-prev
 	background-image: url(../img/svg/slider-prev.svg) !important;
-	left: 71px;
+	left: 40px;
+
 .swiper-button-next
 	background-image: url(../img/svg/slider-next.svg) !important;
-	right: 71px;
+	right: 40px;
 
 .swiper-pagination
 	bottom: 0 !important;

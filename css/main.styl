@@ -7,12 +7,13 @@ $yellow = #FFFAB8
 $pink = #FFC4C4
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
-@import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css');
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,700,900&subset=chinese-traditional');
+// @import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css');
+// @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700');
 // font-family: 'Raleway', 'Noto Sans TC' !important;
 
 *
-	font-family: 'Noto Sans', 'Noto Sans TC' !important;
+	font-family: 'Noto Sans TC' !important;
 	font-size: 24px;
 	color: $gray-blue;
 	font-weight: bold;
@@ -31,12 +32,19 @@ body
 	-ms-flex-align: center!important;
 	align-items: center!important;
 
+@media (min-width: 992px)
+	.container
+		max-width: 850px !important;
+
+.font-900
+	font-weight: 900;
+
 .block-title
 	font-size: 32px;
-	font-style: italic;
-	font-weight: bold;
+	color: $green !important;
+	font-weight: 900;
 	margin-bottom: 10px;
-	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	// text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 /* ----------------- */
 
@@ -56,6 +64,7 @@ header
 			padding-top: 25px;
 	.nav-link
 		font-family: 'Raleway' !important;
+		font-weight: normal;
 		color: white;
 		font-size: 15px;
 		letter-spacing: 2.76px;
@@ -66,7 +75,7 @@ header
 		 &:hover
 			background-size: 100% 20%;
 	&.scrolling
-		background-color: rgba(51, 49, 51, .3);
+		background-color: rgba(51, 49, 51, .7);
 
 #particles-overlay
 	position: absolute;
@@ -95,6 +104,7 @@ header
 .swiper-slide *
 	letter-spacing: normal;
 	font-size: 36px;
+	font-weight: 700;
 
 .s1-text *
 	color: black;
@@ -124,11 +134,15 @@ header
 .swiper-pagination
 	bottom: 0 !important;
 
+.swiper-pagination-bullets
+	z-index: 200;
+
 .swiper-pagination-bullet
 	width: 27px;
 	height: 27px;
 	background-color: white;
-	border 4px solid $green
+	border 4px solid $green;
+	opacity: 1;
 	margin-left: 15px !important;
 	margin-right: 15px !important;
 
@@ -139,12 +153,16 @@ header
 // 	margin-bottom: 124px;
 
 /*** Vision  ***/
+.content-text
+	letter-spacing: 4.416px;
+
 #animation-trigger
 	min-height: 1px;
 	margin-bottom: 100px;
 
 
 #parallax-text
+	letter-spacing: 4.8576px;
 	flex: 0 0 40%;
 	max-width: 40%;
 	padding-right: 15px;
@@ -181,6 +199,9 @@ header
 	.row
 		margin-top: 96px;
 
+#p-subtitle
+	letter-spacing: 4.8576px;
+
 #spinning-bg
 	width: 150%;
 	height: 150%;
@@ -193,18 +214,19 @@ header
 	background-size: contain;
 	background-image: url('../img/blue-spin-bg.png');
 	content: '';
-	animation: spinZ 24s linear infinite;
+	// animation: spinZ 24s linear infinite;
 
-@keyframes spinZ
-	0%
-		-webkit-transform: rotate(0deg);
-		-webkit-transform-origin: 50% 50%;
-	100%
-		-webkit-transform: rotate(360deg);
-		-webkit-transform-origin: 50% 50%;
+// @keyframes spinZ
+// 	0%
+// 		-webkit-transform: rotate(0deg);
+// 		-webkit-transform-origin: 50% 50%;
+// 	100%
+// 		-webkit-transform: rotate(360deg);
+// 		-webkit-transform-origin: 50% 50%;
 
 .product-label
 	padding: 5px 10px;
+	font-size: 18px;
 	.gradient-line
 		width: 100%;
 		height: 10px;
@@ -215,7 +237,9 @@ header
 	margin-bottom: 32px;
 
 .product-intro
-	font-size: 18px;
+	font-size: 16px;
+	font-weight: 100;
+	text-align: justify;
 	letter-spacing: 3.2384px;
 
 .product-item:first-child .product-intro
@@ -230,11 +254,16 @@ header
 	background: $light-blue;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	margin-bottom: 24px;
+	margin-left: 10%;
+	margin-right: 10%;
 	&:hover
 		box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.5);
 
 .mem-name
 	border-bottom: 3px solid rgba(80, 227, 194, 0.3);
+	font-size: 16px;
+	line-height: 1;
+	padding-bottom: 10px;
 
 .mem-title
 	display: flex;
@@ -242,8 +271,7 @@ header
 	align-items: center;
 	flex-direction: column;
 	height: 54px;
-	.sm
-		font-size: 18px;
+	font-size: 16px;
 
 /*** Join Us ***/
 #join-block
@@ -259,7 +287,6 @@ header
 	height: 440px;
 	> div
 		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-		font-weight: normal;
 		&:nth-child(2)
 			margin: 30px 0;
 // #float-line

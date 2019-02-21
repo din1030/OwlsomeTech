@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<title>Owlsome Tech</title>
 		<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
@@ -17,7 +17,7 @@
 					<a class="nav-link scroll-link" href="#banner-block">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link scroll-link" href="#vision-block">Vision</a>
+					<a class="nav-link scroll-link" href="#vision-scroll-target">Vision</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link scroll-link" href="#banner-block"><img src="img/svg/logo-w.svg" alt="" class="img-fluid"></a>
@@ -70,19 +70,19 @@
 				<div class="swiper-pagination"></div>
 
 				<!-- If we need navigation buttons -->
-				<div class="swiper-button-prev"></div>
-				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev d-md-none"></div>
+				<div class="swiper-button-next d-md-none"></div>
 			</div>
 		</div>
 		<div id="scroll-down" class="text-center mt-2">
-			<a href="#scroll-down-target" class="scroll-link"><img src="img/svg/scroll-down.svg" alt=""></a>
+			<a href="#vision-scroll-target" class="scroll-link"><img src="img/svg/scroll-down.svg" alt=""></a>
 		</div>
 		<!-- vision -->
 		<div id="vision-block" class="block-padding">
 			<div class="container">
-				<div class="text-center" id="scroll-down-target">
+				<div class="text-center" id="vision-scroll-target">
 					<div class="block-title anima-animate-enter54">Vision</div>
-					<div class="anima-animate-enter54">以科技，建構更自由美好的未來</div>
+					<div class="font-900 anima-animate-enter54">以科技，建構更自由美好的未來</div>
 					<div class="my-2"><img src="img/svg/who-we-are.svg" alt="" class="img-fluid anima-animate-enter54"></div>
 					<div class="content-text anima-animate-enter54">
 						Owlsome Tech 由一群相信 Data + IT<br>
@@ -110,13 +110,13 @@
 			<div id="spinning-bg"></div>
 			<div class="container">
 				<div class="block-title text-center">Products & Services</div>
-				<div class="text-center">We provide customized of AI solutions</div>
+				<div id="p-subtitle" class="text-center">We provide customized of AI solutions</div>
 				<div class="row">
-					<div class="col-12 col-md-6">
+					<div class="col-12 col-md-6 pr-md-2">
 						<div class="product-item">
 							<div class="product-label">
 								Patent Intelligence
-								<div class="gradient-line"></div>
+								<div class="gradient-line mt-2"></div>
 							</div>
 							<div class="product-logo"><img src="img/product/inqbic.png" srcset="img/product/inqbic@2x.png 2x, img/product/inqbic@3x.png 3x" class="img-fluid w-100"></div>
 							<div class="product-intro">針對專利研究設計的資料運算服務，協助研究人員、產業分析師與企業研發經理進行專利分析，省去蒐集專利資料與程式撰寫的瑣碎過程，並提供客製化的應用開發服務。</div>
@@ -124,14 +124,16 @@
 						<div class="product-item">
 							<div class="product-label">
 								IoT Solution
-								<div class="gradient-line"></div>
+								<div class="gradient-line mt-2"></div>
 							</div>
 							<div class="product-logo"><img src="img/product/ekeeper.png" srcset="img/product/ekeeper@2x.png 2x, img/product/ekeeper@3x.png 3x" class="img-fluid w-100"></div>
-							<div class="product-intro">Chyiher "eKeeper" Elevator Management System 與其禾電梯合作，量身打造的電梯管理系統。以物聯網技術為核心，隨時掌握電梯運行數據，並提供深度資料分析服務與人工智慧應用。</div>
+							<div class="product-intro">
+								<div class="product-intro text-left">Chyiher "eKeeper" Elevator Management System</div>
+								與其禾電梯合作，量身打造的電梯管理系統。以物聯網技術為核心，隨時掌握電梯運行數據，並提供深度資料分析服務與人工智慧應用。</div>
 						</div>
 					</div>
 					<div class="col-12 col-md-6 text-right">
-						<img src="img/service-nodes.png" alt="" class="img-fluid" srcset="img/service-nodes@2x.png 2x, img/service-nodes@3x.png 3x">
+						<img src="img/service-nodes.png" alt="" class="img-fluid" style="width:80%;" srcset="img/service-nodes@2x.png 2x, img/service-nodes@3x.png 3x">
 					</div>
 				</div>
 			</div>
@@ -140,36 +142,37 @@
 		<div id="team-block" class="block-padding">
 			<div class="container text-center">
 				<div id="our-team" class="block-title">Our Team</div>
-				<div class="row">
+				<div class="row no-gutters">
 					<div class="col-6 col-md-3">
 						<div class="photo-wrapper" data-no="1"><img src="img/team/roger.png" alt="Roger Chang" class="w-100" srcset="img/team/roger@2x.png 2x, img/team/roger@3x.png 3x"></div>
-						<div class="mem-name">Roger Chang</div>
+						<div class="mem-name">Roger<span class="d-none d-lg-inline">&nbsp;</span><br class="d-lg-none">Chang</div>
 						<div class="mem-title">
-							<div class="">CEO</div>
+							CEO
 						</div>
 						<div class="mem-intro"></div>
 					</div>
 					<div class="col-6 col-md-3">
 						<div class="photo-wrapper" data-no="2"><img src="img/team/ken.png" alt="Ken Yang" class="w-100" srcset="img/team/ken@2x.png 2x, img/team/ken@3x.png 3x"></div>
-						<div class="mem-name">Ken Yang</div>
+						<div class="mem-name">Ken<span class="d-none d-lg-inline">&nbsp;</span><br class="d-lg-none">Yang</div>
 						<div class="mem-title">
-							<div class="sm">Fullstack Developer</div>
+							Fullstack Developer
 						</div>
 						<div class="mem-intro"></div>
 					</div>
 					<div class="col-6 col-md-3">
 						<div class="photo-wrapper" data-no="3"><img src="img/team/owl.svg" alt="Owlsome" class="w-100"></div>
-						<div class="mem-name">Demi Straughn</div>
+						<div class="mem-name">Demi<span class="d-none d-lg-inline">&nbsp;</span><br class="d-lg-none">Straughn</div>
 						<div class="mem-title">
-							<div class="sm">Design Director</div>
+							Design Director
 						</div>
 						<div class="mem-intro"></div>
 					</div>
 					<div class="col-6 col-md-3">
 						<div class="photo-wrapper" data-no="4"><img src="img/team/owl.svg" alt="Owlsome" class="w-100"></div>
-						<div class="mem-name">Owlsome</div>
+						<div class="mem-name">Owlsome<span class="d-none d-lg-inline">&nbsp;</span><br class="d-lg-none">
+							<span class="d-lg-none" style="font-size:16px;">&nbsp;</span></div>
 						<div class="mem-title">
-							<div class="sm">Owl Assistant</div>
+							Owl Assistant
 						</div>
 						<div class="mem-intro"></div>
 					</div>
@@ -180,7 +183,7 @@
 		<div id="join-block" class="position-relative text-center">
 			<div id="float-line" class="d-flex flex-column justify-content-center">
 				<!-- <img src="img/svg/float-line.svg" alt=""> -->
-				<div class="text-white block-title">
+				<div class="block-title">
 					Join Us
 				</div>
 				<div class="text-white">

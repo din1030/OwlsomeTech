@@ -4,7 +4,9 @@ $(document).ready(function() {
 	$('.scroll-link').click(function(event) {
 		event.preventDefault();
 		var target = $(this).attr('href');
-		$(document).scrollTo($(target), 500);
+		var top = $(target).position().top - 120;
+		console.log(top);
+		$(document).scrollTo(top, 800);
 	});
 
 	// slider setting
@@ -17,6 +19,7 @@ $(document).ready(function() {
 		// If we need pagination
 		pagination: {
 			el: '.swiper-pagination',
+			clickable: true
 		},
 
 		// Navigation arrows

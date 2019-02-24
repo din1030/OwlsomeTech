@@ -91,11 +91,15 @@ $(document).ready(function() {
 		curImg: 0
 	};
 	var content = [
-		"我們致力於打造完善的<br>資料科學應用方案",
-		"讓每個領域的專家<br>都能輕鬆運用",
-		"以資料為燃料<br>打造下一個改變世界的引擎"
+		"<div class='scale-enter-ele scale-enter'>我們致力於打造完善的<br>資料科學應用方案</div>",
+		"<div class='scale-enter-ele scale-enter'><div class='mb-2'>讓每個領域的專家<br>都能輕鬆運用</div>\
+		<div class='mb-1'><img src='img/svg/s2-1.svg' alt='' />&emsp;數據的力量&emsp;</div>\
+		<div class='mb-1'><img src='img/svg/s2-2.svg' alt='' />&emsp;改善既有效率</div>\
+		<div class='mb-1'><img src='img/svg/s2-3.svg' alt='' />&emsp;挖掘創新價值</div></div>",
+		"<div class='scale-enter-ele scale-enter'>以資料為燃料<br>打造下一個改變世界的引擎</div>"
 	];
 
+	var prevImg;
 	// create tween
 	var tween = TweenMax.to(obj, 1, {
 		curImg: images.length - 1, // animate propery curImg to number of images
@@ -104,8 +108,11 @@ $(document).ready(function() {
 		immediateRender: true, // load first image automatically
 		ease: Linear.easeNone, // show every image the same ammount of time
 		onUpdate: function() {
-			$("#scroll-animation img").attr("src", images[obj.curImg]); // set the image source
-			$("#parallax-text").html(content[obj.curImg]);
+			if (prevImg != obj.curImg) {
+				$("#scroll-animation img").attr("src", images[obj.curImg]); // set the image source
+				$("#parallax-text").html(content[obj.curImg]);
+				prevImg = obj.curImg;
+			}
 		}
 	});
 	// init controller

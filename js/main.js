@@ -94,11 +94,18 @@ $(document).ready(function() {
 		console.log('callback - particles.js config loaded');
 	});
 
-	// var secAnimationTrigger = $('#product-block').eq(0).position().top - 300;
+	// header ＆ 進場動畫
 	$(window).scroll(function(event) {
-		// if (!$('#float-line').hasClass('animate') && $('#join-block').visible) {
-		// 	$('#float-line').addClass('animate');
-		// }
+
+		var y = $(window).scrollTop();
+		if (y >= $('header').height()) {
+			$('header').addClass('scrolling');
+			$('#logo-word').fadeOut();
+		} else {
+			$('header').removeClass('scrolling');
+			$('#logo-word').fadeIn();
+		}
+
 		if ($('#vision-scroll-target').visible(true)) {
 			$('#vision-scroll-target .scale-enter-ele').addClass('scale-enter');
 		}
@@ -119,14 +126,6 @@ $(document).ready(function() {
 			$('footer .bottom-enter-ele').addClass('bottom-enter');
 		}
 
-		var y = $(window).scrollTop();
-		if (y >= $('header').height()) {
-			$('header').addClass('scrolling');
-			$('#logo-word').fadeOut();
-		} else {
-			$('header').removeClass('scrolling');
-			$('#logo-word').fadeIn();
-		}
 	});
 
 	var options = {

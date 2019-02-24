@@ -1,12 +1,12 @@
-* {
+html {
   font-family: 'Noto Sans TC' !important;
   font-size: 24px;
   color: #42536c;
   font-weight: 500;
   letter-spacing: 5.888px;
 }
-*:not(div):active,
-*:not(div):focus {
+html:not(div):active,
+html:not(div):focus {
   outline: 0;
   box-shadow: none !important;
 }
@@ -31,7 +31,7 @@ body {
   font-weight: 900;
 }
 .block-title {
-  font-size: 32px;
+  font-size: 1.34rem;
   color: #55d6d2 !important;
   font-weight: 900;
   margin-bottom: 10px;
@@ -108,7 +108,7 @@ header.scrolling {
 }
 .swiper-slide * {
   letter-spacing: normal;
-  font-size: 36px;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 .s1-text * {
@@ -116,7 +116,7 @@ header.scrolling {
 }
 .s2-text * {
   text-shadow: 0px 4px 4px rgba(0,0,0,0.25);
-  font-size: 48px;
+  font-size: 2rem;
 }
 .s3-text {
   width: 45%;
@@ -189,8 +189,10 @@ header.scrolling {
   }
   #parallax-text,
   #scroll-animation {
-    flex: 0 0 100%;
     max-width: 100%;
+  }
+  #parallax-text {
+    align-items: flex-start !important;
   }
 }
 .block-padding {
@@ -228,7 +230,7 @@ header.scrolling {
 }
 .product-label {
   padding: 5px 10px;
-  font-size: 18px;
+  font-size: 0.75rem;
 }
 .product-label .gradient-line {
   width: 100%;
@@ -265,7 +267,7 @@ header.scrolling {
 }
 .mem-name {
   border-bottom: 3px solid rgba(80,227,194,0.3);
-  font-size: 16px;
+  font-size: 0.67rem;
   line-height: 1;
   padding-bottom: 10px;
 }
@@ -275,7 +277,7 @@ header.scrolling {
   align-items: center;
   flex-direction: column;
   height: 54px;
-  font-size: 16px;
+  font-size: 0.67rem;
 }
 /*** Join Us ***/
 #join-block {
@@ -304,7 +306,7 @@ footer {
 }
 footer * {
   color: #55d6d2;
-  font-size: 18px;
+  font-size: 0.75rem;
   letter-spacing: 1.656px;
 }
 footer #copyright {
@@ -313,4 +315,19 @@ footer #copyright {
   font-size: 12px;
   letter-spacing: normal;
   font-weight: normal;
+}
+@media (max-width: 992px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media (max-width: 767px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (max-width: 565px) {
+  html {
+    font-size: 12px;
+  }
 }

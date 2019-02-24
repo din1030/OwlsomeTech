@@ -12,7 +12,7 @@ $pink = #FFC4C4
 // @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700');
 // font-family: 'Raleway', 'Noto Sans TC' !important;
 
-*
+html
 	font-family: 'Noto Sans TC' !important;
 	font-size: 24px;
 	color: $gray-blue;
@@ -43,11 +43,11 @@ body
 	font-weight: 900;
 
 .block-title
-	font-size: 32px;
+	font-size: 1.34rem;
 	color: $green !important;
 	font-weight: 900;
 	margin-bottom: 10px;
-	// text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	// text-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
 
 /* ----------------- */
 
@@ -58,7 +58,7 @@ header
 	height: 117px;
 	top: 0;
 	background: transparent;
-	transition: all 0.4s;
+	transition: all .4s;
 	.nav-item
 		padding-right: 28px;
 		padding-left: 28px;
@@ -78,7 +78,7 @@ header
 		font-size: 15px;
 		letter-spacing: 2.76px;
 		padding: 0;
-		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
 		transition: background-size .4s ease;
 	.logo
 		display: block;
@@ -112,15 +112,15 @@ header
 
 .swiper-slide *
 	letter-spacing: normal;
-	font-size: 36px;
+	font-size: 1.5rem;
 	font-weight: 700;
 
 .s1-text *
 	color: black;
 
 .s2-text *
-	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	font-size: 48px;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
+	font-size: 2rem;
 
 .s3-text
 	width: 45%;
@@ -193,8 +193,9 @@ header
 	#animation-wrapper .row
 		flex-direction: column-reverse;
 	#parallax-text, #scroll-animation
-		flex: 0 0 100%;
 		max-width: 100%;
+	#parallax-text
+		align-items: flex-start !important;
 
 .block-padding
 	padding-top 116px
@@ -239,11 +240,11 @@ header
 
 .product-label
 	padding: 5px 10px;
-	font-size: 18px;
+	font-size: .75rem;
 	.gradient-line
 		width: 100%;
 		height: 10px;
-		background: linear-gradient(90deg, rgba(85, 214, 210, 0.5) 6.71%, rgba(255, 255, 255, 0.248351) 53.66%, rgba(255, 255, 255, 0) 100%);
+		background: linear-gradient(90deg, rgba(85, 214, 210, .5) 6.71%, rgba(255, 255, 255, .248351) 53.66%, rgba(255, 255, 255, 0) 100%);
 
 .product-logo
 	margin-top: 16px;
@@ -265,16 +266,16 @@ header
 .photo-wrapper
 	border-radius: 50%;
 	background: $light-blue;
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
 	margin-bottom: 24px;
 	margin-left: 10%;
 	margin-right: 10%;
 	&:hover
-		box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.5);
+		box-shadow: 0px 10px 4px rgba(0, 0, 0, .5);
 
 .mem-name
-	border-bottom: 3px solid rgba(80, 227, 194, 0.3);
-	font-size: 16px;
+	border-bottom: 3px solid rgba(80, 227, 194, .3);
+	font-size: .67rem;
 	line-height: 1;
 	padding-bottom: 10px;
 
@@ -284,7 +285,7 @@ header
 	align-items: center;
 	flex-direction: column;
 	height: 54px;
-	font-size: 16px;
+	font-size: .67rem;
 
 /*** Join Us ***/
 #join-block
@@ -299,24 +300,9 @@ header
 #float-line
 	height: 440px;
 	> div
-		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, .5);
 		&:nth-child(2)
 			margin: 30px 0;
-// #float-line
-// 	height: 440px;
-// 	background: url(../img/svg/float-line.svg) repeat-x 0 / 100% auto;;
-// 	animation: ani 40s linear infinite;
-// 	background-size: cover;
-	// > div
-	// 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-	// 	&:nth-child(2)
-	// 		margin: 30px 0;
-//
-// @keyframes ani
-// 	0%
-// 		background-position: 4400px 0;
-// 	100%
-// 		background-position: 0 0;
 
 /*** Footer ***/
 footer
@@ -325,7 +311,7 @@ footer
 	padding-bottom: 30px;
 	*
 		color: $green;
-		font-size: 18px;
+		font-size: .75rem;
 		letter-spacing: 1.656px;
 	#copyright
 		color: #E2E2E2;
@@ -333,3 +319,16 @@ footer
 		font-size: 12px;
 		letter-spacing: normal;
 		font-weight: normal;
+
+
+@media (max-width: 992px)
+	html
+		font-size: 20px;
+
+@media (max-width: 767px)
+	html
+		font-size: 16px
+
+@media (max-width: 565px)
+	html
+		font-size: 12px;

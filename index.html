@@ -13,7 +13,7 @@
 	<body>
 		<!-- menu -->
 		<header>
-			<ul class="nav justify-content-center">
+			<ul class="nav justify-content-center d-none d-md-flex desktop">
 				<li class="nav-item">
 					<a class="nav-link scroll-link" href="#banner-block">Home</a>
 				</li>
@@ -31,6 +31,31 @@
 				</li>
 				<li class="nav-item">
 					<a class="nav-link scroll-link" href="#team-block">About</a>
+				</li>
+			</ul>
+			<ul class="nav d-md-none mobile justify-content-between align-items-center">
+				<li class="nav-item logo">
+					<a class="nav-link" href="#banner-block">
+						<img src="img/svg/logo-green.svg" alt="" class="img-fluid">
+					</a>
+				</li>
+				<li class="nav-item">
+					<div class="dropdown m-3">
+						<a class="dropdown-toggle" href="#" role="button" id="mobile-menu-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<div id="menu-trigger">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</a>
+						<div id="mobile-menu" class="dropdown-menu text-center p-0 m-0" aria-labelledby="mobile-menu-toggle">
+							<a class="dropdown-item scroll-link" href="#banner-block">Home</a>
+							<a class="dropdown-item scroll-link" href="#vision-scroll-target">Vision</a>
+							<a class="dropdown-item scroll-link" href="#product-block">Product</a>
+							<a class="dropdown-item scroll-link" href="#team-block">About</a>
+						</div>
+					</div>
 				</li>
 			</ul>
 		</header>
@@ -184,7 +209,7 @@
 			</div>
 		</div>
 		<!-- join us -->
-		<div id="join-block" class="position-relative text-center">
+		<div id="join-block" class="position-relative text-center block-padding">
 			<div id="float-line" class="d-flex flex-column justify-content-center">
 				<!-- <img src="img/svg/float-line.svg" alt=""> -->
 				<div class="block-title font-italic scale-enter-ele">
@@ -203,10 +228,10 @@
 		<footer>
 			<div class="container">
 				<div class="d-flex flex-column flex-md-row justify-content-between">
-					<div class="bottom-enter-ele">
-						<img src="img/svg/logo-green.svg" alt="Logo" class="img-fluid">
+					<div class="bottom-enter-ele text-center text-md-left">
+						<img src="img/svg/logo-green.svg" alt="Logo" class="img-fluid w-75">
 					</div>
-					<div class="bottom-enter-ele align-self-center mt-5 mt-lg-0">
+					<div class="bottom-enter-ele align-self-center align-self-md-start mt-5 mt-md-0">
 						<div>Email: service@owlsome.tech</div>
 						<div class="d-flex justify-md-content-start">
 							<div>Line:&nbsp;</div>

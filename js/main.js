@@ -1,5 +1,55 @@
 $(document).ready(function() {
 
+	// 物連網 particles
+	particlesJS.load("particles-overlay", "./js/particle.json", function() {
+		console.log('callback - particles.js config loaded');
+	});
+
+	// header ＆ 進場動畫
+	$(window).scroll(function(event) {
+		if ($(window).width() > 767) {
+			var y = $(window).scrollTop();
+			if (y >= $('header').height()) {
+				$('header').addClass('scrolling');
+				$('#logo-word').fadeOut();
+			} else {
+				$('header').removeClass('scrolling');
+				$('#logo-word').fadeIn();
+			}
+		} else {
+			$('header').removeClass('scrolling');
+		}
+
+		if ($('#vision-scroll-target').visible(true)) {
+			$('#vision-scroll-target .scale-enter-ele').addClass('scale-enter');
+		}
+		if ($('#product-block').visible(true)) {
+			$('#product-block .scale-enter-ele').addClass('scale-enter');
+			$('#product-block .left-enter-ele').addClass('left-enter');
+		}
+
+		if ($('#team-block').visible(true)) {
+			$('#team-block .scale-enter-ele').addClass('scale-enter');
+		}
+
+		if ($('#join-block').visible(true)) {
+			$('#join-block .scale-enter-ele').addClass('scale-enter');
+		}
+
+		if ($('footer').visible(true)) {
+			$('footer .bottom-enter-ele').addClass('bottom-enter');
+		}
+
+	});
+
+	// mobile menu icon animation
+	$('#menu-trigger').click(function() {
+		$(this).toggleClass('open');
+	});
+	$('#mobile-menu').click(function() {
+		$('#menu-trigger').removeClass('open');
+	});
+
 	// 區塊連結都用捲動的
 	$('.scroll-link').click(function(event) {
 		event.preventDefault();
@@ -90,44 +140,7 @@ $(document).ready(function() {
 		$teamPic.attr('src', originalSrc);
 	});
 
-	particlesJS.load("particles-overlay", "./js/particle.json", function() {
-		console.log('callback - particles.js config loaded');
-	});
-
-	// header ＆ 進場動畫
-	$(window).scroll(function(event) {
-
-		var y = $(window).scrollTop();
-		if (y >= $('header').height()) {
-			$('header').addClass('scrolling');
-			$('#logo-word').fadeOut();
-		} else {
-			$('header').removeClass('scrolling');
-			$('#logo-word').fadeIn();
-		}
-
-		if ($('#vision-scroll-target').visible(true)) {
-			$('#vision-scroll-target .scale-enter-ele').addClass('scale-enter');
-		}
-		if ($('#product-block').visible(true)) {
-			$('#product-block .scale-enter-ele').addClass('scale-enter');
-			$('#product-block .left-enter-ele').addClass('left-enter');
-		}
-
-		if ($('#team-block').visible(true)) {
-			$('#team-block .scale-enter-ele').addClass('scale-enter');
-		}
-
-		if ($('#join-block').visible(true)) {
-			$('#join-block .scale-enter-ele').addClass('scale-enter');
-		}
-
-		if ($('footer').visible(true)) {
-			$('footer .bottom-enter-ele').addClass('bottom-enter');
-		}
-
-	});
-
+	// 右下 contact us
 	var options = {
 		line: "//owlsometech.gogodin-studio.com/img/svg/qrcode.svg", // Line QR code URL
 		email: "service@owlsome.tech", // Email

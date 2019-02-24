@@ -65,7 +65,7 @@ $(document).ready(function() {
 	var scene = new ScrollMagic.Scene({
 			triggerElement: '#animation-trigger',
 			duration: 1000, // the scene should last for a scroll distance of 100px
-			triggerHook: 0.05
+			triggerHook: 0
 		})
 		.setTween(tween)
 		.setPin("#animation-wrapper")
@@ -94,18 +94,38 @@ $(document).ready(function() {
 		console.log('callback - particles.js config loaded');
 	});
 
+	// var secAnimationTrigger = $('#product-block').eq(0).position().top - 300;
 	$(window).scroll(function(event) {
-		if (!$('#float-line').hasClass('animate') && $('#join-block').visible) {
-			$('#float-line').addClass('animate');
+		// if (!$('#float-line').hasClass('animate') && $('#join-block').visible) {
+		// 	$('#float-line').addClass('animate');
+		// }
+		if ($('#vision-scroll-target').visible(true)) {
+			$('#vision-scroll-target .scale-enter-ele').addClass('scale-enter');
 		}
-		if ($('#scroll-down-target').visible) {
-			$('#scroll-down-target > *').addClass('anima-animate-enter54');
+		if ($('#product-block').visible(true)) {
+			$('#product-block .scale-enter-ele').addClass('scale-enter');
+			$('#product-block .left-enter-ele').addClass('left-enter');
 		}
+
+		if ($('#team-block').visible(true)) {
+			$('#team-block .scale-enter-ele').addClass('scale-enter');
+		}
+
+		if ($('#join-block').visible(true)) {
+			$('#join-block .scale-enter-ele').addClass('scale-enter');
+		}
+
+		if ($('footer').visible(true)) {
+			$('footer .bottom-enter-ele').addClass('bottom-enter');
+		}
+
 		var y = $(window).scrollTop();
 		if (y >= $('header').height()) {
 			$('header').addClass('scrolling');
+			$('#logo-word').fadeOut();
 		} else {
 			$('header').removeClass('scrolling');
+			$('#logo-word').fadeIn();
 		}
 	});
 

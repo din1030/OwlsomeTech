@@ -1,0 +1,49 @@
+// out: $1.css
+
+.scale-enter-ele, .scale-enter-ele-2
+	opacity: 0;
+	transform: scale(0.9);
+
+.scale-enter
+	animation: animate-scale-enter 3s ease-in-out 1 normal forwards;
+	animation-delay: 0s
+
+@keyframes animate-scale-enter
+	0%
+		opacity: 0;
+		transform: scale(0.9);
+	100%
+		opacity: 1;
+		transform: scale(1);
+
+.left-enter-ele
+	opacity: 0;
+	transform: translate(-100px, 0);
+
+.left-enter
+	animation: animate-left-enter 1s ease-in-out 1 normal forwards;
+	animation-delay: 0s
+
+@keyframes animate-left-enter
+	0%
+		opacity: 0;
+		transform: translate(-100px, 0)
+	100%
+		opacity: 1;
+		transform: translate(0, 0)
+
+.bottom-enter-ele
+	opacity: 0;
+	transform: translate(0, 25px);
+
+.bottom-enter
+	animation: animate-bottom-enter 3s ease-in-out 1 normal forwards;
+	animation-delay: 0s
+
+@keyframes animate-bottom-enter
+	0%
+		opacity: 0;
+		transform: translate(0, 25px);
+	100%
+		opacity: 1;
+		transform: translate(0, 0);

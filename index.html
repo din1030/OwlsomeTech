@@ -4,9 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<title>Owlsome Tech</title>
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900|Raleway" rel="stylesheet">
 		<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
-		<link rel="stylesheet" href="css/anima.css">
+		<link rel="stylesheet" href="css/animation.css">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
@@ -20,7 +21,10 @@
 					<a class="nav-link scroll-link" href="#vision-scroll-target">Vision</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link scroll-link" href="#banner-block"><img src="img/svg/logo-w.svg" alt="" class="img-fluid"></a>
+					<a class="nav-link scroll-link" href="#banner-block">
+						<img src="img/svg/logo-w.svg" alt="" class="img-fluid mx-auto mb-1 logo">
+						<img src="img/svg/logo-w-word.svg" alt="" class="img-fluid logo" id="logo-word">
+					</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link scroll-link" href="#product-block">Product</a>
@@ -41,7 +45,7 @@
 							<div class="zh">
 								為每一個領域的專家提供資料解決方案
 							</div>
-							<div class="en mb-4">
+							<div class="en mb-1">
 								We provide AI solution for experts in all industry
 							</div>
 						</div>
@@ -81,10 +85,10 @@
 		<div id="vision-block" class="block-padding">
 			<div class="container">
 				<div class="text-center" id="vision-scroll-target">
-					<div class="block-title anima-animate-enter54">Vision</div>
-					<div class="font-900 anima-animate-enter54">以科技，建構更自由美好的未來</div>
-					<div class="my-2"><img src="img/svg/who-we-are.svg" alt="" class="img-fluid anima-animate-enter54"></div>
-					<div class="content-text anima-animate-enter54">
+					<div class="block-title scale-enter-ele">Vision</div>
+					<div class="fw-700 scale-enter-ele">以科技，建構更自由美好的未來</div>
+					<div class="my-2"><img src="img/svg/who-we-are.svg" alt="" class="img-fluid scale-enter-ele"></div>
+					<div class="content-text scale-enter-ele">
 						Owlsome Tech 由一群相信 Data + IT<br>
 						可以改變世界的工程師與科學家組成。
 					</div>
@@ -109,25 +113,25 @@
 		<div id="product-block" class="block-padding position-relative">
 			<div id="spinning-bg"></div>
 			<div class="container">
-				<div class="block-title text-center">Products & Services</div>
+				<div class="block-title text-center scale-enter-ele">Products & Services</div>
 				<div id="p-subtitle" class="text-center">We provide customized of AI solutions</div>
 				<div class="row">
 					<div class="col-12 col-md-6 pr-md-2">
 						<div class="product-item">
-							<div class="product-label">
+							<div class="product-label left-enter-ele">
 								Patent Intelligence
 								<div class="gradient-line mt-2"></div>
 							</div>
-							<div class="product-logo"><img src="img/product/inqbic.png" srcset="img/product/inqbic@2x.png 2x, img/product/inqbic@3x.png 3x" class="img-fluid w-100"></div>
-							<div class="product-intro">針對專利研究設計的資料運算服務，協助研究人員、產業分析師與企業研發經理進行專利分析，省去蒐集專利資料與程式撰寫的瑣碎過程，並提供客製化的應用開發服務。</div>
+							<div class="product-logo"><img src="img/product/inqbic.png" srcset="img/product/inqbic@2x.png 2x, img/product/inqbic@3x.png 3x" class="img-fluid w-100 scale-enter-ele"></div>
+							<div class="product-intro scale-enter-ele">針對專利研究設計的資料運算服務，協助研究人員、產業分析師與企業研發經理進行專利分析，省去蒐集專利資料與程式撰寫的瑣碎過程，並提供客製化的應用開發服務。</div>
 						</div>
 						<div class="product-item">
-							<div class="product-label">
+							<div class="product-label left-enter-ele">
 								IoT Solution
 								<div class="gradient-line mt-2"></div>
 							</div>
-							<div class="product-logo"><img src="img/product/ekeeper.png" srcset="img/product/ekeeper@2x.png 2x, img/product/ekeeper@3x.png 3x" class="img-fluid w-100"></div>
-							<div class="product-intro">
+							<div class="product-logo"><img src="img/product/ekeeper.png" srcset="img/product/ekeeper@2x.png 2x, img/product/ekeeper@3x.png 3x" class="img-fluid w-100 scale-enter-ele"></div>
+							<div class="product-intro scale-enter-ele">
 								<div class="product-intro text-left">Chyiher "eKeeper" Elevator Management System</div>
 								與其禾電梯合作，量身打造的電梯管理系統。以物聯網技術為核心，隨時掌握電梯運行數據，並提供深度資料分析服務與人工智慧應用。</div>
 						</div>
@@ -141,9 +145,9 @@
 		<!-- team -->
 		<div id="team-block" class="block-padding">
 			<div class="container text-center">
-				<div id="our-team" class="block-title">Our Team</div>
+				<div id="our-team" class="block-title scale-enter-ele">Our Team</div>
 				<div class="row no-gutters">
-					<div class="col-6 col-md-3">
+					<div class="col-6 col-md-3 scale-enter-ele">
 						<div class="photo-wrapper" data-no="1"><img src="img/team/roger.png" alt="Roger Chang" class="w-100" srcset="img/team/roger@2x.png 2x, img/team/roger@3x.png 3x"></div>
 						<div class="mem-name">Roger<span class="d-none d-lg-inline">&nbsp;</span><br class="d-lg-none">Chang</div>
 						<div class="mem-title">
@@ -151,7 +155,7 @@
 						</div>
 						<div class="mem-intro"></div>
 					</div>
-					<div class="col-6 col-md-3">
+					<div class="col-6 col-md-3 scale-enter-ele">
 						<div class="photo-wrapper" data-no="2"><img src="img/team/ken.png" alt="Ken Yang" class="w-100" srcset="img/team/ken@2x.png 2x, img/team/ken@3x.png 3x"></div>
 						<div class="mem-name">Ken<span class="d-none d-lg-inline">&nbsp;</span><br class="d-lg-none">Yang</div>
 						<div class="mem-title">
@@ -159,7 +163,7 @@
 						</div>
 						<div class="mem-intro"></div>
 					</div>
-					<div class="col-6 col-md-3">
+					<div class="col-6 col-md-3 scale-enter-ele">
 						<div class="photo-wrapper" data-no="3"><img src="img/team/owl.svg" alt="Owlsome" class="w-100"></div>
 						<div class="mem-name">Demi<span class="d-none d-lg-inline">&nbsp;</span><br class="d-lg-none">Straughn</div>
 						<div class="mem-title">
@@ -167,7 +171,7 @@
 						</div>
 						<div class="mem-intro"></div>
 					</div>
-					<div class="col-6 col-md-3">
+					<div class="col-6 col-md-3 scale-enter-ele">
 						<div class="photo-wrapper" data-no="4"><img src="img/team/owl.svg" alt="Owlsome" class="w-100"></div>
 						<div class="mem-name">Owlsome<span class="d-none d-lg-inline">&nbsp;</span><br class="d-lg-none">
 							<span class="d-lg-none" style="font-size:16px;">&nbsp;</span></div>
@@ -183,14 +187,14 @@
 		<div id="join-block" class="position-relative text-center">
 			<div id="float-line" class="d-flex flex-column justify-content-center">
 				<!-- <img src="img/svg/float-line.svg" alt=""> -->
-				<div class="block-title">
+				<div class="block-title font-italic scale-enter-ele">
 					Join Us
 				</div>
-				<div class="text-white">
+				<div class="text-white scale-enter-ele">
 					我們正在尋找你！<br>
 					Owlsome Tech is hiring！
 				</div>
-				<div class="text-white">
+				<div class="text-white scale-enter-ele">
 					如果你和我們一樣，相信資料的價值來自人類的無窮創意，歡迎加入我們！
 				</div>
 			</div>
@@ -199,13 +203,19 @@
 		<footer>
 			<div class="container">
 				<div class="d-flex flex-column flex-md-row justify-content-between">
-					<div>
+					<div class="bottom-enter-ele">
 						<img src="img/svg/logo-green.svg" alt="Logo">
 					</div>
-					<div class="">
+					<div class="bottom-enter-ele">
 						<div>Email: service@owlsome.tech</div>
 						<div class="d-flex justify-content-start">
-							<span>Line:</span><img src="img/svg/qrcode.svg" alt="LINE QR code" class="mt-1 ml-2" width="80" height="80">
+							<div>Line:&nbsp;</div>
+							<div class="">
+								<div class="">
+									@owlsome.tech
+								</div>
+								<img src="img/svg/qrcode.svg" alt="LINE QR code" class="mt-1" width="80" height="80">
+							</div>
 						</div>
 					</div>
 				</div>

@@ -113,35 +113,34 @@ $(document).ready(function() {
 		"<div class='scale-enter-ele scale-enter-fast'>以資料為燃料<br>打造下一個改變世界的引擎</div>"
 	];
 
-	var prevImg;
-	// create tween
-	var tween = TweenMax.to(obj, 1, {
-		curImg: images.length - 1, // animate propery curImg to number of images
-		roundProps: "curImg", // only integers so it can be used as an array index
-		// repeat: 3, // repeat 3 times
-		immediateRender: true, // load first image automatically
-		ease: Linear.easeNone, // show every image the same ammount of time
-		onUpdate: function() {
-			if (prevImg != obj.curImg) {
-				$("#scroll-animation img").attr("src", images[obj.curImg]); // set the image source
-				$("#parallax-text").html(content[obj.curImg]);
-				prevImg = obj.curImg;
-			}
-		}
-	});
-	// init controller
-	var controller = new ScrollMagic.Controller();
-
-	// create a scene
-	var scene = new ScrollMagic.Scene({
-			triggerElement: '#animation-trigger',
-			duration: 1000, // the scene should last for a scroll distance of 100px
-			triggerHook: 0.01
-		})
-		.setTween(tween)
-		.setPin("#animation-wrapper")
-		.addIndicators() // add indicators (requires plugin)
-		.addTo(controller);
+	// var prevImg;
+	// // create tween
+	// var tween = TweenMax.to(obj, 1, {
+	// 	curImg: images.length - 1, // animate propery curImg to number of images
+	// 	roundProps: "curImg", // only integers so it can be used as an array index
+	// 	immediateRender: true, // load first image automatically
+	// 	ease: Linear.easeNone, // show every image the same ammount of time
+	// 	onUpdate: function() {
+	// 		if (prevImg != obj.curImg) {
+	// 			$("#scroll-animation img").attr("src", images[obj.curImg]); // set the image source
+	// 			$("#parallax-text").html(content[obj.curImg]);
+	// 			prevImg = obj.curImg;
+	// 		}
+	// 	}
+	// });
+	// // init controller
+	// var controller = new ScrollMagic.Controller();
+	//
+	// // create a scene
+	// var scene = new ScrollMagic.Scene({
+	// 		triggerElement: '#animation-trigger',
+	// 		duration: 1000, // the scene should last for a scroll distance of 100px
+	// 		triggerHook: 0.01
+	// 	})
+	// 	.setTween(tween)
+	// 	.setPin("#animation-wrapper")
+	// 	.addIndicators() // add indicators (requires plugin)
+	// 	.addTo(controller);
 
 	// our team hover change pics
 	var originalSrc, $teamPic;

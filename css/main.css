@@ -434,8 +434,9 @@ footer #copyright {
   letter-spacing: normal;
   font-weight: normal;
 }
-@media (max-width: 992px) {
-  html {
-    font-size: 20px;
-  }
+footer a:hover,
+footer a:active,
+footer a:focus {
+  color: #fff;
+  text-decoration: none;
 }

@@ -33,6 +33,16 @@ body {
 .fw-900 {
   font-weight: 900;
 }
+.block-padding {
+  padding-top: 112px;
+  padding-bottom: 112px;
+}
+@media (max-width: 767px) {
+  .block-padding {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+}
 .block-title {
   font-size: 1.34rem;
   color: #55d6d2 !important;
@@ -51,7 +61,10 @@ header {
 }
 header.scrolling {
   background-color: rgba(51,49,51,0.7);
-  height: 85px;
+  height: 64px;
+}
+header.scrolling .nav-item {
+  margin-top: 8px !important;
 }
 header ul.desktop .nav-item {
   padding-right: 28px;
@@ -150,7 +163,7 @@ header ul.mobile .dropdown-toggle::after {
   color: #55d6d2;
   letter-spacing: 4.86px;
   padding: 15px;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 }
 #mobile-menu a:nth-child(n+2) {
   border-top: 1px solid #d8d8d8;
@@ -160,14 +173,16 @@ header ul.mobile .dropdown-toggle::after {
 }
 #particles-overlay {
   position: absolute;
-  height: 582px;
+  height: 46vw;
+  min-height: 450px;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 100;
 }
 #main-slider {
-  height: 582px;
+  height: 46vw;
+  min-height: 450px;
   width: 100%;
   padding-bottom: 50px;
 }
@@ -247,7 +262,11 @@ header ul.mobile .dropdown-toggle::after {
 #animation-wrapper .row {
   height: 100vh;
 }
-#parallax-text {
+.animation-wrapper {
+  margin-top: 72px;
+}
+#parallax-text,
+.parallax-text {
   letter-spacing: 4.8576px;
   flex: 0 0 40%;
   max-width: 40%;
@@ -255,7 +274,12 @@ header ul.mobile .dropdown-toggle::after {
   padding-left: 15px;
   justify-content: center;
 }
-#scroll-animation {
+#parallax-text img,
+.parallax-text img {
+  width: 5vw;
+}
+#scroll-animation,
+.scroll-animation {
   flex: 0 0 60%;
   max-width: 60%;
   padding-right: 15px;
@@ -263,20 +287,28 @@ header ul.mobile .dropdown-toggle::after {
   justify-content: flex-end;
 }
 @media (max-width: 767px) {
-  #animation-wrapper .row {
+  #animation-wrapper .row,
+  .animation-wrapper .row {
     flex-direction: column-reverse;
+    height: 90vh;
+    margin-top: 4vh;
   }
   #parallax-text,
-  #scroll-animation {
+  #scroll-animation,
+  .parallax-text,
+  .scroll-animation {
     max-width: 100%;
   }
-  #parallax-text {
-    align-items: flex-start !important;
+  #parallax-text img,
+  .parallax-text img {
+    width: 45px;
+    height: auto;
   }
-}
-.block-padding {
-  padding-top: 116px;
-  padding-bottom: 116px;
+  .stage2 > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 /*** Products & Services ***/
 #product-block {
@@ -330,6 +362,14 @@ header ul.mobile .dropdown-toggle::after {
 .product-item:first-child .product-intro {
   margin-bottom: 112px;
 }
+@media (max-width: 767px) {
+  #product-block .row > div:nth-child(2) {
+    margin-top: 72px;
+  }
+  .product-item:first-child .product-intro {
+    margin-bottom: 48px;
+  }
+}
 /*** Team ***/
 #our-team {
   margin-bottom: 56px;
@@ -348,9 +388,7 @@ header ul.mobile .dropdown-toggle::after {
 .mem-name {
   border-bottom: 3px solid rgba(80,227,194,0.3);
   font-size: 0.67rem;
-  line-height: 1;
   letter-spacing: 3px;
-  line-height: 1.3;
   padding-bottom: 10px;
 }
 .mem-title {
@@ -358,8 +396,10 @@ header ul.mobile .dropdown-toggle::after {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 54px;
   font-size: 0.67rem;
+  letter-spacing: 3px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 /*** Join Us ***/
 #join-block {

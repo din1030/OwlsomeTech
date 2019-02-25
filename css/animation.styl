@@ -5,7 +5,11 @@
 	transform: scale(0.9);
 
 .scale-enter
-	animation: animate-scale-enter 3s ease-in-out 1 normal forwards;
+	animation: animate-scale-enter 2s ease-in-out 1 normal forwards;
+	animation-delay: 0s
+
+.scale-enter-fast
+	animation: animate-scale-enter 1s ease-in-out 1 normal forwards;
 	animation-delay: 0s
 
 @keyframes animate-scale-enter
@@ -21,8 +25,14 @@
 	transform: translate(-100px, 0);
 
 .left-enter
-	animation: animate-left-enter 1s ease-in-out 1 normal forwards;
-	animation-delay: 0s
+	animation: animate-left-enter 1.5s ease-in-out 1 normal forwards;
+	animation-delay: 0s;
+
+s
+	animation-delay: 1s !important;
+
+.left-enter-2
+	animation-delay: 2s !important;
 
 @keyframes animate-left-enter
 	0%

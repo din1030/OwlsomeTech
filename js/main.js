@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	// 物連網 particles
 	particlesJS.load("particles-overlay", "./js/particle.json", function() {
-		console.log('callback - particles.js config loaded');
+		// console.log('callback - particles.js config loaded');
 	});
 
 	// header ＆ 進場動畫
@@ -23,6 +23,20 @@ $(document).ready(function() {
 		if ($('#vision-scroll-target').visible(true)) {
 			$('#vision-scroll-target .scale-enter-ele').addClass('scale-enter');
 		}
+
+		if ($('.animation-wrapper').eq(0).visible(true)) {
+			$('.animation-wrapper:nth-child(1) .scale-enter-ele').addClass('scale-enter');
+		}
+
+		if ($('.animation-wrapper').eq(1).visible(true)) {
+			$('.animation-wrapper:nth-child(2) .scale-enter-ele').addClass('scale-enter');
+			$('.animation-wrapper:nth-child(2) .left-enter-ele').addClass('left-enter');
+		}
+
+		if ($('.animation-wrapper').eq(2).visible(true)) {
+			$('.animation-wrapper:nth-child(3) .scale-enter-ele').addClass('scale-enter');
+		}
+
 		if ($('#product-block').visible(true)) {
 			$('#product-block .scale-enter-ele').addClass('scale-enter');
 			$('#product-block .left-enter-ele').addClass('left-enter');
@@ -54,8 +68,7 @@ $(document).ready(function() {
 	$('.scroll-link').click(function(event) {
 		event.preventDefault();
 		var target = $(this).attr('href');
-		var top = $(target).position().top - 120;
-		console.log(top);
+		var top = $(target).position().top - 64;
 		$(document).scrollTo(top, 800);
 	});
 
@@ -91,12 +104,13 @@ $(document).ready(function() {
 		curImg: 0
 	};
 	var content = [
-		"<div class='scale-enter-ele scale-enter'>我們致力於打造完善的<br>資料科學應用方案</div>",
-		"<div class='scale-enter-ele scale-enter'><div class='mb-2'>讓每個領域的專家<br>都能輕鬆運用</div>\
+		"<div class='scale-enter-ele scale-enter-fast'>我們致力於打造完善的<br>資料科學應用方案</div>",
+		"<div class='stage2 scale-enter-ele scale-enter-fast'>\
+		<div class='mb-2'>讓每個領域的專家<br class='d-none d-md-block'>都能輕鬆運用</div>\
 		<div class='mb-1'><img src='img/svg/s2-1.svg' alt='' />&emsp;數據的力量&emsp;</div>\
 		<div class='mb-1'><img src='img/svg/s2-2.svg' alt='' />&emsp;改善既有效率</div>\
 		<div class='mb-1'><img src='img/svg/s2-3.svg' alt='' />&emsp;挖掘創新價值</div></div>",
-		"<div class='scale-enter-ele scale-enter'>以資料為燃料<br>打造下一個改變世界的引擎</div>"
+		"<div class='scale-enter-ele scale-enter-fast'>以資料為燃料<br>打造下一個改變世界的引擎</div>"
 	];
 
 	var prevImg;
@@ -122,7 +136,7 @@ $(document).ready(function() {
 	var scene = new ScrollMagic.Scene({
 			triggerElement: '#animation-trigger',
 			duration: 1000, // the scene should last for a scroll distance of 100px
-			triggerHook: 0
+			triggerHook: 0.01
 		})
 		.setTween(tween)
 		.setPin("#animation-wrapper")

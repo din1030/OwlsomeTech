@@ -307,6 +307,7 @@ header ul.mobile .dropdown-toggle::after {
 .product-label {
   padding: 5px 10px;
   font-size: 0.75rem;
+  font-weight: 700;
 }
 .product-label .gradient-line {
   width: 100%;

@@ -192,7 +192,7 @@ header ul.mobile .dropdown-toggle::after {
   background-position: center center;
 }
 #main-slider .swiper-slide.s1 {
-  background-image: url("../img/svg/c1.svg");
+  background-image: url("../img/svg/c1-bg.svg");
 }
 #main-slider .swiper-slide.s2 {
   background-image: url("../img/svg/c2.svg");
@@ -204,6 +204,9 @@ header ul.mobile .dropdown-toggle::after {
   letter-spacing: normal;
   font-size: 1.5rem;
   font-weight: 700;
+}
+.s1-nb img {
+  width: 50vw;
 }
 .s1-text * {
   color: #000;
@@ -247,6 +250,30 @@ header ul.mobile .dropdown-toggle::after {
 }
 .swiper-pagination-bullet-active {
   background-color: #55d6d2;
+}
+@media (max-width: 767px) {
+  .s1-nb img {
+    width: 80vw;
+  }
+  .s1-text * {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 420px) {
+  .s1-text * {
+    font-size: 0.8rem;
+  }
+  [class*="swiper-button"] {
+    width: 5vw;
+    height: 9vw;
+    background-size: 5vw 9vw !important;
+  }
+  .swiper-button-prev {
+    left: 5vw;
+  }
+  .swiper-button-next {
+    right: 5vw;
+  }
 }
 /*** Vision  ***/
 .content-text {
@@ -324,6 +351,9 @@ header ul.mobile .dropdown-toggle::after {
 #product-block .row {
   margin-top: 96px;
 }
+.webp #product-block {
+  background-image: url("../img/blue-bg.webp");
+}
 #p-subtitle {
   letter-spacing: 4.8576px;
 }
@@ -338,6 +368,9 @@ header ul.mobile .dropdown-toggle::after {
   background-size: contain;
   background-image: url("../img/blue-spin-bg.png");
   content: '';
+}
+.webp #spinning-bg {
+  background-image: url("../img/blue-spin-bg.webp");
 }
 .product-label {
   padding: 5px 10px;
@@ -362,12 +395,21 @@ header ul.mobile .dropdown-toggle::after {
 .product-item:first-child .product-intro {
   margin-bottom: 112px;
 }
+#service-nodes {
+  text-align: right;
+}
+#service-nodes picture {
+  width: 80%;
+}
 @media (max-width: 767px) {
   #product-block .row > div:nth-child(2) {
     margin-top: 72px;
   }
   .product-item:first-child .product-intro {
     margin-bottom: 48px;
+  }
+  #service-nodes {
+    text-align: center;
   }
 }
 /*** Team ***/
@@ -409,6 +451,9 @@ header ul.mobile .dropdown-toggle::after {
   background-size: cover;
   background-position: center;
   border-bottom: 4px solid #fff;
+}
+.webp #join-block {
+  background-image: url("../img/join-us-bg2.webp");
 }
 #float-line > div {
   text-shadow: 0px 4px 4px rgba(0,0,0,0.5);

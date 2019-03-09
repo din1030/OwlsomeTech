@@ -65,13 +65,18 @@
 				<div id="particles-overlay"></div>
 				<div class="swiper-wrapper">
 					<!-- Slides -->
-					<div class="swiper-slide s1">
+					<div class="swiper-slide s1 position-relative">
+						<div class="s1-nb position-absolute d-flex flex-center w-100 h-100">
+							<img src="img/svg/c1-nb.svg" alt="" class="">
+						</div>
 						<div class="s1-text d-flex flex-column align-items-center justify-content-end h-100">
-							<div class="zh text-center">
-								為每一個領域的專家提供資料解決方案
+							<div>
+								<!-- <div id="typed-strings" class="zh text-center d-none"> 為每一個領域的專家提供資料解決方案 </div> -->
+								<span id="typed1" class="zh text-center typed1"></span>
 							</div>
 							<div class="en mb-1 text-center">
-								We provide AI solution for experts in all industry
+								<span id="typed2" class="zh text-center typed2"></span>
+								<!-- We provide AI solution for experts in all industry -->
 							</div>
 						</div>
 					</div>
@@ -183,8 +188,11 @@
 								與其禾電梯合作，量身打造的電梯管理系統。以物聯網技術為核心，隨時掌握電梯運行數據，並提供深度資料分析服務與人工智慧應用。</div>
 						</div>
 					</div>
-					<div class="col-12 col-md-6 text-right">
-						<img src="img/service-nodes.png" alt="" class="img-fluid" style="width:80%;" srcset="img/service-nodes@2x.png 2x, img/service-nodes@3x.png 3x">
+					<div id="service-nodes" class="col-12 col-md-6">
+						<picture>
+							<source srcset="img/service-nodes.webp, img/service-nodes@2x.webp 2x, img/service-nodes@3x.webp 3x" type="image/webp">
+							<img src="img/service-nodes.png" alt="" class="img-fluid" srcset="img/service-nodes@2x.png 2x, img/service-nodes@3x.png 3x">
+						</picture>
 					</div>
 				</div>
 			</div>
@@ -289,12 +297,15 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
 
 		<script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
 		<!-- ScrollMagic related plugins -->
 		<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.js"></script> -->
 		<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script> -->
 		<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script> -->
 		<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script> -->
 
+		<script src="js/modernizr-custom.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

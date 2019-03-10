@@ -7,18 +7,19 @@ $(document).ready(function() {
 	// 物連網 particles
 	particlesJS.load("particles-overlay", "./js/particle.json", function() {
 		// console.log('callback - particles.js config loaded');
-		var typed1 = new Typed('.typed1', {
-			// stringsElement: '#typed-strings'
-			strings: ['為每一個領域的專家提供資料解決方案'],
-			typeSpeed: 50,
-			startDelay: 1000,
-		});
-		var typed2 = new Typed('.typed2', {
-			// stringsElement: '#typed-strings'
-			strings: ['We provide AI solution for experts in all industry'],
-			typeSpeed: 30,
-			startDelay: 1000,
-		});
+	});
+
+	var typed1 = new Typed('.typed1', {
+		// stringsElement: '#typed-strings'
+		strings: ['為每一個領域的專家提供資料解決方案'],
+		typeSpeed: 50,
+		startDelay: 1000,
+	});
+	var typed2 = new Typed('.typed2', {
+		// stringsElement: '#typed-strings'
+		strings: ['We provide AI solution for experts in all industry'],
+		typeSpeed: 30,
+		startDelay: 1000,
 	});
 
 	// header ＆ 進場動畫

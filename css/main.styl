@@ -178,13 +178,34 @@ header
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center center;
-		// height: 632px;
+
+.swiper-slide
+	&.s1
+		background-image: url(../img/c1.png);
+	&.s2
+		background-image: url(../img/c2.png);
+	&.s3
+		background-image: url(../img/svg/c3.svg);
+
+// 1.5 dpr
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)
+	.swiper-slide
 		&.s1
-			background-image: url(../img/svg/c1.svg);
+			background-image: url(../img/c1@2x.png);
 		&.s2
-			background-image: url(../img/svg/c2.svg);
-		&.s3
-			background-image: url(../img/svg/c3.svg);
+			background-image: url(../img/c2@2x.png);
+		// &.s3
+		// 	background-image: url(../img/c3@2x.png);
+// 2.0 dpr
+@media (-webkit-min-device-pixel-ratio: 2.0), (min-resolution: 192dpi)
+	.swiper-slide
+		&.s1
+			background-image: url(../img/c1@3x.png);
+		&.s2
+			background-image: url(../img/c2@3x.png);
+		// &.s3
+		// 	background-image: url(../img/c3@3x.png);
+
 
 .swiper-slide *
 	letter-spacing: normal;
@@ -192,7 +213,7 @@ header
 	font-weight: 700;
 
 .s1-nb img
-	width: 50vw
+	max-width: 50vw
 	max-height: 50%;
 
 .s1-text *

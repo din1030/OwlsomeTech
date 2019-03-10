@@ -1,4 +1,8 @@
 $(document).ready(function() {
+	var lazyLoadInstance = new LazyLoad({
+		elements_selector: ".lazy"
+		// ... more custom settings?
+	});
 
 	// 物連網 particles
 	particlesJS.load("particles-overlay", "./js/particle.json", function() {

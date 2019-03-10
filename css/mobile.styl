@@ -1,0 +1,79 @@
+// out: $1.css
+
+@media (min-width: 992px)
+	.container
+		max-width: 850px !important;
+
+@media (max-width: 767px)
+	body
+		margin-top: 78px;
+	.block-padding
+		padding-top 72px;
+		padding-bottom 72px;
+
+@media (max-width: 767px)
+	header
+		background-color: rgba(51, 49, 51, 0.85);
+		height: auto;
+
+@media (max-width: 420px)
+	.s1-nb img, .s3-brain img
+		max-width: 80vw;
+		margin-top: 0;
+		margin-bottom: 10vw;
+	.s1-text *, .s2-text *, .s3-text *
+		font-size: 1.2rem;
+	[class*="swiper-button"]
+		width: 5vw;
+		height: 9vw;
+		background-size: 5vw 9vw !important;
+	.swiper-button-prev
+		left: 5vw;
+	.swiper-button-next
+		right: 5vw;
+
+
+@media (max-width 767px)
+	#animation-wrapper .row,
+	.animation-wrapper .row
+		flex-direction: column-reverse;
+		height: 90vh;
+		margin-top: 4vh;
+	#parallax-text, #scroll-animation,
+	.parallax-text, .scroll-animation
+		max-width: 100%;
+	#parallax-text img,
+	.parallax-text img
+		width: 45px;
+		height: auto;
+	.stage2 > div
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+
+@media (max-width: 767px)
+	#spinning-bg
+		background: none !important;
+
+@media (max-width: 767px)
+	#product-block .row > div:nth-child(2)
+		margin-top: 72px;
+	.product-item:first-child .product-intro
+		margin-bottom: 48px;
+	#service-nodes
+		text-align: center;
+
+
+// RWD font size
+@media (max-width: 992px)
+	html
+		font-size: 20px;
+
+@media (max-width: 767px)
+	html
+		font-size: 18px
+
+// @media (max-width: 565px)
+// 	html
+// 		font-size: 12px;

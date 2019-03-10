@@ -420,6 +420,11 @@ header ul.mobile .dropdown-toggle::after {
 .webp #spinning-bg {
   background-image: url("../img/blue-spin-bg.webp");
 }
+@media (max-width: 767px) {
+  #spinning-bg {
+    background: none !important;
+  }
+}
 .product-label {
   padding: 5px 10px;
   font-size: 0.75rem;

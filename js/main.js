@@ -4,22 +4,22 @@ $(document).ready(function() {
 		// ... more custom settings?
 	});
 
+	var typed1, typed2;
 	// 物連網 particles
 	particlesJS.load("particles-overlay", "./js/particle.json", function() {
 		// console.log('callback - particles.js config loaded');
-	});
-
-	var typed1 = new Typed('.typed1', {
-		// stringsElement: '#typed-strings'
-		strings: ['為每一個領域的專家提供資料解決方案'],
-		typeSpeed: 50,
-		startDelay: 1000,
-	});
-	var typed2 = new Typed('.typed2', {
-		// stringsElement: '#typed-strings'
-		strings: ['We provide AI solution for experts in all industry'],
-		typeSpeed: 30,
-		startDelay: 1000,
+		typed1 = new Typed('.typed1', {
+			// stringsElement: '#typed-strings'
+			strings: ['為每一個領域的專家提供資料解決方案'],
+			typeSpeed: 50,
+			startDelay: 1000,
+		});
+		typed2 = new Typed('.typed2', {
+			// stringsElement: '#typed-strings'
+			strings: ['We provide AI solution for experts in all industry'],
+			typeSpeed: 30,
+			startDelay: 1000,
+		});
 	});
 
 	// header ＆ 進場動畫
@@ -91,11 +91,11 @@ $(document).ready(function() {
 
 	// slider setting
 	var mySwiper = new Swiper('#main-slider', {
-		loop: true,
+		// loop: true,
 		speed: 1200,
-		// autoplay: {
-		// 	delay: 5000,
-		// },
+		autoplay: {
+			delay: 5000,
+		},
 		// If we need pagination
 		pagination: {
 			el: '.swiper-pagination',
@@ -107,9 +107,49 @@ $(document).ready(function() {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
-
 	});
-
+	mySwiper.on('slideChange', function() {
+		console.log(mySwiper.realIndex);
+		if (mySwiper.realIndex == 0) {
+			typed1.reset(true);
+			typed2.reset(true);
+			typed1 = new Typed('.typed1', {
+				strings: ['為每一個領域的專家提供資料解決方案'],
+				typeSpeed: 50,
+				startDelay: 1000,
+			});
+			typed2 = new Typed('.typed2', {
+				strings: ['We provide AI solution for experts in all industry'],
+				typeSpeed: 30,
+				startDelay: 1000,
+			});
+		} else {
+			// if (typed1) {
+			// 	typed1.destroy();
+			// 	typed2.destroy();
+			// }
+			$('.typed1, .typed2').empty();
+			$('.typed-cursor').remove();
+		}
+	});
+	// mySwiper.on('slideChangeTransitionEnd', function() {
+	// 	console.log(mySwiper.activeIndex);
+	// 	if (mySwiper.activeIndex == 1 || mySwiper.activeIndex == 4) {
+	//
+	// 		var typed1 = new Typed('.typed1', {
+	// 			// stringsElement: '#typed-strings'
+	// 			strings: ['為每一個領域的專家提供資料解決方案'],
+	// 			typeSpeed: 50,
+	// 			startDelay: 1000,
+	// 		});
+	// 		var typed2 = new Typed('.typed2', {
+	// 			// stringsElement: '#typed-strings'
+	// 			strings: ['We provide AI solution for experts in all industry'],
+	// 			typeSpeed: 30,
+	// 			startDelay: 1000,
+	// 		});
+	// 	}
+	// });
 	// parallax setting
 	var images = [
 		'../img/svg/stage1.svg',

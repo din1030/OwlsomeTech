@@ -220,7 +220,7 @@ $(document).ready(function() {
 	$('.photo-wrapper').mouseleave(function(event) {
 		$teamPic.attr('src', originalSrc);
 		srcset = srcset.replace('-hover@2x','@2x');
-		srcset = srcset.replace('-hover@3x','@3x',);
+		srcset = srcset.replace('-hover@3x','@3x');
 		$teamPic.attr('srcset', srcset);
 	});
 

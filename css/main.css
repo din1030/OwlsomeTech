@@ -188,10 +188,10 @@ header ul.mobile .dropdown-toggle::after {
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
   .swiper-slide.s1 {
-    background-image: url("../img/c1@2x.png");
+	background-image: url("../img/c1@2x.png");
   }
   .swiper-slide.s2 {
-    background-image: url("../img/c2@2x.jpg");
+	background-image: url("../img/c2@2x.jpg");
   }
 }
 .swiper-slide * {
@@ -253,30 +253,30 @@ header ul.mobile .dropdown-toggle::after {
 }
 @media (max-width: 767px) {
   .swiper-slide.s1 {
-    background-size: contain !important;
+	background-size: contain !important;
   }
   .s1-nb img,
   .s3-brain img {
-    max-width: 70vw;
+	max-width: 70vw;
   }
   .s1-nb img {
-    margin-top: 10vw;
+	margin-top: 10vw;
   }
   .s1-text *,
   .s2-text *,
   .s3-text * {
-    font-size: 1.4rem;
+	font-size: 1.4rem;
   }
   [class*="swiper-button"] {
-    width: 7.5vw;
-    height: 14vw;
-    background-size: 7.5vw 14vw !important;
+	width: 7.5vw;
+	height: 14vw;
+	background-size: 7.5vw 14vw !important;
   }
   .swiper-button-prev {
-    left: 5vw;
+	left: 5vw;
   }
   .swiper-button-next {
-    right: 5vw;
+	right: 5vw;
   }
 }
 /*** Vision  ***/
@@ -387,7 +387,7 @@ header ul.mobile .dropdown-toggle::after {
 }
 .photo-wrapper {
   border-radius: 50%;
-  background: #caf2f0;
+  background: #D9D9D3;
   box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
   margin-bottom: 24px;
   margin-left: 10%;

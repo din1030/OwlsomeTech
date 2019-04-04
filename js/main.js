@@ -204,7 +204,7 @@ $(document).ready(function() {
 	var hoverPhoto = [
 		'roger-hover.png',
 		'ken-hover.png',
-		'owl-hover.svg',
+		'demi-hover.png',
 		'owl-hover.svg'
 	];
 	$('.photo-wrapper').mouseenter(function(event) {
@@ -219,6 +219,9 @@ $(document).ready(function() {
 	});
 	$('.photo-wrapper').mouseleave(function(event) {
 		$teamPic.attr('src', originalSrc);
+		srcset = srcset.replace('-hover@2x','@2x');
+		srcset = srcset.replace('-hover@3x','@3x',);
+		$teamPic.attr('srcset', srcset);
 	});
 
 	// 右下 contact us

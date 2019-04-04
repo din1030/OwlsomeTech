@@ -200,7 +200,7 @@ $(document).ready(function() {
 	// 	.addTo(controller);
 
 	// our team hover change pics
-	var originalSrc, $teamPic;
+	var originalSrc, srcset, $teamPic;
 	var hoverPhoto = [
 		'roger-hover.png',
 		'ken-hover.png',
@@ -212,7 +212,7 @@ $(document).ready(function() {
 		$teamPic = $(this).find('img').eq(0);
 		originalSrc = $teamPic.attr('src');
 		$teamPic.attr('src', 'img/team/' + hoverPhoto[no]);
-		var srcset = $teamPic.attr('srcset');
+		srcset = $teamPic.attr('srcset');
 		srcset = srcset.replace('@2x','-hover@2x');
 		srcset = srcset.replace('@3x','-hover@3x');
 		$teamPic.attr('srcset', srcset);

@@ -22,19 +22,36 @@ $(document).ready(function() {
 		});
 	});
 
+	var waiting = false;
 	// header ＆ 進場動畫
 	$(window).scroll(function(event) {
-		if ($(window).width() > 767) {
+		if (waiting) {
+			return;
+		}
+		waiting = true;
+		scrollAnimations();
+		setTimeout(function() {
+			waiting = false;
+		}, 200);
+	});
+
+	var winWidth = $(window).width();
+	var $header = $('header');
+	var headerHeight = $header.height();
+	var $logoWord = $('#logo-word');
+
+	var scrollAnimations = function() {
+		if (winWidth > 767) {
 			var y = $(window).scrollTop();
-			if (y >= $('header').height()) {
-				$('header').addClass('scrolling');
-				$('#logo-word').fadeOut();
+			if (y >= headerHeight) {
+				$header.addClass('scrolling');
+				$logoWord.fadeOut();
 			} else {
-				$('header').removeClass('scrolling');
-				$('#logo-word').fadeIn();
+				$header.removeClass('scrolling');
+				$logoWord.fadeIn();
 			}
 		} else {
-			$('header').removeClass('scrolling');
+			$header.removeClass('scrolling');
 		}
 
 		if ($('#vision-scroll-target').visible(true)) {
@@ -70,8 +87,7 @@ $(document).ready(function() {
 		if ($('footer').visible(true)) {
 			$('footer .bottom-enter-ele').addClass('bottom-enter');
 		}
-
-	});
+	}
 
 	// mobile menu icon animation
 	$('#menu-trigger').click(function() {
@@ -196,7 +212,7 @@ $(document).ready(function() {
 		})
 		.setTween(tween)
 		.setPin("#animation")
-		.addIndicators() // add indicators (requires plugin)
+		//.addIndicators() // add indicators (requires plugin)
 		.addTo(controller);
 
 	// our team hover change pics
@@ -216,8 +232,8 @@ $(document).ready(function() {
 			return;
 		}
 		srcset = $teamPic.attr('srcset');
-		srcset = srcset.replace('@2x','-hover@2x');
-		srcset = srcset.replace('@3x','-hover@3x');
+		srcset = srcset.replace('@2x', '-hover@2x');
+		srcset = srcset.replace('@3x', '-hover@3x');
 		$teamPic.attr('srcset', srcset);
 	});
 	$('.photo-wrapper').mouseleave(function(event) {
@@ -225,8 +241,8 @@ $(document).ready(function() {
 		if (no == 3) { // svg 不需 srcset
 			return;
 		}
-		srcset = srcset.replace('-hover@2x','@2x');
-		srcset = srcset.replace('-hover@3x','@3x');
+		srcset = srcset.replace('-hover@2x', '@2x');
+		srcset = srcset.replace('-hover@3x', '@3x');
 		$teamPic.attr('srcset', srcset);
 	});
 

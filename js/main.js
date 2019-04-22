@@ -218,19 +218,17 @@ $(document).ready(function() {
 	// our team hover change pics
 	var originalSrc, srcset, no, $teamPic;
 	var hoverPhoto = [
-		'roger-hover.png',
-		'ken-hover.png',
-		'demi-hover.png',
-		'owl-hover.svg'
+		'roger-hover@2x.png',
+		'ken-hover@2x.png',
+		'demi-hover@2x.png',
+		'yoge-hover@2x.png',
+		'owl-hover@2x.png'
 	];
 	$('.photo-wrapper').mouseenter(function(event) {
-		var no = $(this).data('no') - 1;
+		no = $(this).data('no');
 		$teamPic = $(this).find('img').eq(0);
 		originalSrc = $teamPic.attr('src');
 		$teamPic.attr('src', 'img/team/' + hoverPhoto[no]);
-		if (no == 3) { // svg 不需 srcset
-			return;
-		}
 		srcset = $teamPic.attr('srcset');
 		srcset = srcset.replace('@2x', '-hover@2x');
 		srcset = srcset.replace('@3x', '-hover@3x');
@@ -238,9 +236,6 @@ $(document).ready(function() {
 	});
 	$('.photo-wrapper').mouseleave(function(event) {
 		$teamPic.attr('src', originalSrc);
-		if (no == 3) { // svg 不需 srcset
-			return;
-		}
 		srcset = srcset.replace('-hover@2x', '@2x');
 		srcset = srcset.replace('-hover@3x', '@3x');
 		$teamPic.attr('srcset', srcset);
